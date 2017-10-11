@@ -10,6 +10,7 @@ list=`ls $dix` # input the directory where all the genomes are
 
 for g in $list;
 do 
+    echo $g
     python substract-chromosomes-plasmids.py $g $dix $dox
 done
 
