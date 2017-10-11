@@ -20,7 +20,7 @@ mkdir(dirc+"/"+fi+"/plasmids/")
 mkdir(dirc+"/"+fi+"/chromosomes/")
 
 for ix,record in enumerate(SeqIO.parse(dirc+"/"+fi+"/"+fi+".fna", "fasta")):
-    gid = record.id 
+    gid = record.description 
     seq = record.seq
 
     if "plasmid" in gid: 
