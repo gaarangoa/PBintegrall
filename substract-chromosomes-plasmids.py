@@ -28,7 +28,7 @@ for ix,record in enumerate(SeqIO.parse(dirc+"/"+fi+"/"+fi+".fna", "fasta")):
     else:
         gtype="chromosomes"
     
-    nrecord = SeqRecord(record.seq, id=gid, name='', description=record.description)
+    nrecord = SeqRecord(record.seq, id=record.id, name='', description=record.description)
     SeqIO.write([nrecord], open(dirc+"/"+fi+'/'+gtype+'/'+str(ix)+'.fasta', 'w'), 'fasta')
 
 
