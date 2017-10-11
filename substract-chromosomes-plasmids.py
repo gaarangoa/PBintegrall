@@ -7,7 +7,7 @@ from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 import os
 
-def mkdir(directory)
+def mkdir(directory):
     try:
         os.stat(directory)
     except:
