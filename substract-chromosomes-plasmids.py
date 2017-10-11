@@ -1,4 +1,5 @@
 # This scripts traverses a file from the PATRIC database and splits the files into chromosome sequences and plasmids.
+# /data/patric/genomes/1133852.3 
 
 import sys
 
