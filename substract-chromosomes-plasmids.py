@@ -15,12 +15,12 @@ def mkdir(directory):
 
 fi=sys.argv[1] # fasta file with sequences
 diri = sys.argv[2] # input directory
-dirc=sys.argv[3] # output directory
+diro=sys.argv[3] # output directory
 
-mkdir(dirc+"/plasmids/")
-mkdir(dirc+"/chromosomes/")
+mkdir(diro+"/plasmids/")
+mkdir(diro+"/chromosomes/")
 
-for ix,record in enumerate(SeqIO.parse(dirc+"/"+fi+"/"+fi+".fna", "fasta")):
+for ix,record in enumerate(SeqIO.parse(diri+"/"+fi+"/"+fi+".fna", "fasta")):
     gid = record.description 
     seq = record.seq
 
@@ -30,6 +30,6 @@ for ix,record in enumerate(SeqIO.parse(dirc+"/"+fi+"/"+fi+".fna", "fasta")):
         gtype="chromosomes"
     
     nrecord = SeqRecord(record.seq, id=record.id, name='', description=record.description)
-    SeqIO.write([nrecord], open(dirc+"/"+gtype+'/'+fi+"_"+str(ix)+'.fasta', 'w'), 'fasta')
+    SeqIO.write([nrecord], open(diro+"/"+gtype+'/'+fi+"_"+str(ix)+'.fasta', 'w'), 'fasta')
 
 
