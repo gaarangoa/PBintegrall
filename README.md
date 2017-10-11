@@ -1,1 +1,1 @@
-# Integron database for antibiotic resistance genes
+## Integron database for antibiotic resistance genes
