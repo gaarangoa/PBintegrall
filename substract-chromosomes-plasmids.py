@@ -19,7 +19,7 @@ dirc=sys.argv[2] #
 mkdir(dirc+"/genomes/")
 mkdir(dirc+"/chromosomes/")
 
-for ix,record in enumerate(SeqIO.parse(fi, "fasta")):
+for ix,record in enumerate(SeqIO.parse(dirc+"/"+fi, "fasta")):
     gid = record.id 
     seq = record.seq
 
