@@ -26,6 +26,6 @@ for ix,record in enumerate(SeqIO.parse(diri+"/"+fi+"/"+fi+".fna", "fasta")):
     else:
         gtype="chromosomes"
         cfile.write(gtype+'/'+fi+"_"+str(ix)+'.fasta\n')
-        print(gtype+'/'+fi+"_"+str(ix)+'.fasta\n')
+        print(gtype+'/'+fi+"_"+str(ix)+'.fasta')
 
 
