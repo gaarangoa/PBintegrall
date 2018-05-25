@@ -22,10 +22,10 @@ for ix,record in enumerate(SeqIO.parse(diri+"/"+fi+"/"+fi+".fna", "fasta")):
     if "plasmid" in gid:
         gtype="plasmids"
         pfile.write(gtype+'/'+fi+"_"+str(ix)+'.fasta\n')
-        print(gtype+'/'+fi+"_"+str(ix)+'.fasta')
+        print(gtype+'\t'+fi+"_"+str(ix)+'.fasta')
     else:
         gtype="chromosomes"
         cfile.write(gtype+'/'+fi+"_"+str(ix)+'.fasta\n')
-        print(gtype+'/'+fi+"_"+str(ix)+'.fasta')
+        print(gtype+'\t'+fi+"_"+str(ix)+'.fasta')
 
 
